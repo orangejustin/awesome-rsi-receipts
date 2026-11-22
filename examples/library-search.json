@@ -1,0 +1,6 @@
+[
+  {"id":"exact-title","baseline":true,"candidate":true},
+  {"id":"punctuation-in-title","baseline":false,"candidate":true},
+  {"id":"distinct-editions","baseline":true,"candidate":false},
+  {"id":"missing-in-catalog","baseline":false,"candidate":false}
+]
