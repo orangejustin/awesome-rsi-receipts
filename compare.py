@@ -1,8 +1,27 @@
-"""Summarize paired binary judgments. Does not run an agent or infer outcomes."""
+"""Summarize paired pass/fail judgments for a baseline and a candidate on the same tasks.
+
+Reports which tasks flipped and how likely that many one-sided flips would be if the
+change made no difference. Does not run an agent, grade outputs or infer outcomes.
+"""
 
 import argparse
 import json
+from math import comb
 from pathlib import Path
+
+
+def sign_test(gained, regressed):
+    """Exact two-sided p-value for "the flips are a coin toss" (McNemar's exact test).
+
+    Only tasks whose judgment changed carry information about the change. Under the
+    hypothesis that the candidate is no better or worse, each flip is equally likely
+    to be a gain or a regression, so the count of gains is Binomial(flips, 1/2).
+    """
+    flips = gained + regressed
+    if flips == 0:
+        return 1.0
+    tail = sum(comb(flips, k) for k in range(min(gained, regressed) + 1))
+    return min(1.0, 2 * tail / 2 ** flips)
 
 
 def compare(rows):
@@ -33,6 +52,9 @@ def compare(rows):
         "tasks": len(rows),
         "baseline_passes": len(groups["both_pass"]) + len(groups["regressed"]),
         "candidate_passes": len(groups["both_pass"]) + len(groups["gained"]),
+        "net": len(groups["gained"]) - len(groups["regressed"]),
+        "flips": len(groups["gained"]) + len(groups["regressed"]),
+        "sign_test_p": round(sign_test(len(groups["gained"]), len(groups["regressed"])), 4),
         **groups,
     }
 
