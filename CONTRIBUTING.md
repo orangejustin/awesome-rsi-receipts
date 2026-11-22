@@ -1,5 +1,26 @@
 # Contributing
 
-Start from [the receipt template](receipts/TEMPLATE.md). Show one decision a maintainer could make differently because of this evidence. Link the original paper and versioned artifacts; describe development, final and transfer results separately. Do not infer task-level correctness from ranks, or call an aggregate transcription a replay. Document negative and inconclusive findings as readily as gains.
+A receipt earns its place by changing a decision: after reading it, a maintainer should do something differently, or stop believing something. Results that went the other way, and results that settle nothing, are as welcome as gains.
 
-Only include material you may publish. Never submit API keys, private traces, or copyrighted datasets. Synthetic examples must be labeled. Run the offline command and tests in the README before submitting.
+## Add or correct a receipt
+
+1. Copy [the template](receipts/TEMPLATE.md) to `receipts/your-name.md` and fill in the fields and the seven sections.
+2. Cite the original source. arXiv links carry a version (`v2`); links into a repository are pinned to a commit, so the evidence cannot move under the reader.
+3. Keep development, final and transfer results apart. Do not infer per-task outcomes from ranks or averages, and do not call a transcription of published numbers a replication.
+4. Say what you did yourself. Reading a diff is not rerunning an experiment.
+5. Write `unknown` where the source is silent. A missing control is information.
+6. Run:
+
+   ```sh
+   python3 receipts.py lint          # fields, sections, pinned sources
+   python3 receipts.py ledger        # rebuild the tables in README.md
+   python3 -m unittest discover
+   ```
+
+## Add a source
+
+Add one line to the fitting section of the README: what it is, then where its evidence stops. If you cannot say where it stops, it is not ready to list. Popularity is not a reason to include something.
+
+## Ground rules
+
+Only include material you may publish. Never submit API keys, private traces or copyrighted datasets. Label synthetic examples as synthetic. Disclose any connection you have to work you add.

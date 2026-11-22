@@ -1,4 +1,4 @@
-name: Verify offline receipt
+name: Verify
 on: [push, pull_request]
 permissions:
   contents: read
@@ -10,5 +10,11 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           persist-credentials: false
-      - run: python3 -m unittest discover -v
-      - run: python3 compare.py examples/library-search.json
+      - name: Receipts have their fields, sections and pinned sources
+        run: python3 receipts.py lint
+      - name: README tables match the receipts
+        run: python3 receipts.py ledger --check
+      - name: Tests
+        run: python3 -m unittest discover -v
+      - name: Offline example
+        run: python3 compare.py examples/library-search.json
