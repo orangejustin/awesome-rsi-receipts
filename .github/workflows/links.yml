@@ -1,0 +1,18 @@
+name: Links
+# Weekly: do the cited sources still exist? A pinned commit or file that is gone, or a page that
+# returns 404, fails the job. Sites that refuse automated requests are listed, not failed.
+on:
+  schedule:
+    - cron: "23 7 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - run: python3 receipts.py links

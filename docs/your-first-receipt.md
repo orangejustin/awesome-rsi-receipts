@@ -1,6 +1,6 @@
 # Test one harness change on your own data
 
-Use your own already-recorded pass/fail judgments, or collect them with your evaluator. This repo only compares the paired records; it does not run a model, grade outputs, or estimate statistical uncertainty.
+Use your own already-recorded pass/fail judgments, or collect them with your evaluator. This repo only compares the paired records; it does not run a model or grade outputs.
 
 ## 1. Decide what would make you keep it
 
@@ -35,6 +35,8 @@ Run the command separately for the final and transfer sets, and again against th
 
 ## 3. Keep the before/after record
 
-Record the totals and inspect `gained` and `regressed` against your decision rule. An aggregate tie can hide a costly regression. A pass on your holdout is not evidence of transfer unless you also checked a different task family. If the only evidence is a published aggregate, keep it in prose; don't invent paired rows.
+Record the totals and inspect `gained` and `regressed` against your decision rule. An aggregate tie can hide a costly regression.
+
+Then read `sign_test_p`. Only the tasks that flipped say anything about the change, and the value is how often a split at least this one-sided would turn up if every flip were a coin toss. Five gains and two regressions give 0.45: no evidence either way. Fifteen and three give 0.008. The test treats each task as one independent judgment, so settle how repeated trials become one judgment per task before you run it, and do not read a small value as proof that the gain will hold on other tasks. A pass on your holdout is not evidence of transfer unless you also checked a different task family. If the only evidence is a published aggregate, keep it in prose; don't invent paired rows.
 
 Keep private data local or in a private checkout. Only share task IDs, judgments, traces, or excerpts you are allowed to publish. To check the comparison tool itself, run `python3 -m unittest discover -v`.
