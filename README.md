@@ -1,5 +1,7 @@
 # Awesome RSI Receipts [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+<p align="center"><b>English</b> | <a href="README.zh-CN.md">简体中文</a> | <a href="README.zh-TW.md">繁體中文</a></p>
+
 [![Verify](https://github.com/orangejustin/awesome-rsi-receipts/actions/workflows/verify.yml/badge.svg)](https://github.com/orangejustin/awesome-rsi-receipts/actions/workflows/verify.yml)
 [![Links](https://github.com/orangejustin/awesome-rsi-receipts/actions/workflows/links.yml/badge.svg)](https://github.com/orangejustin/awesome-rsi-receipts/actions/workflows/links.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)

@@ -1,7 +1,7 @@
 ---
-title: STOP: an improver applied to itself
-question: Does self-improvement still work when the underlying model is weaker?
-system: Self-Taught Optimizer (STOP)
+title: 'STOP: an improver applied to itself'
+question: 'Does self-improvement still work when the underlying model is weaker?'
+system: 'Self-Taught Optimizer (STOP)'
 year: 2023
 changed: improver
 verified: reported

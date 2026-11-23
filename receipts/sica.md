@@ -1,7 +1,7 @@
 ---
-title: SICA: one run, fifty tasks
-question: How much of a 36-point gain on 50 tasks is the agent getting smarter?
-system: SICA, a Self-Improving Coding Agent
+title: 'SICA: one run, fifty tasks'
+question: 'How much of a 36-point gain on 50 tasks is the agent getting smarter?'
+system: 'SICA, a Self-Improving Coding Agent'
 year: 2025
 changed: harness
 verified: reported

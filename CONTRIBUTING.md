@@ -4,7 +4,7 @@ A receipt earns its place by changing a decision: after reading it, a maintainer
 
 ## Add or correct a receipt
 
-1. Copy [the template](receipts/TEMPLATE.md) to `receipts/your-name.md` and fill in the fields and the seven sections.
+1. Copy [the template](receipts/TEMPLATE.md) to `receipts/your-name.md` and fill in the fields and the seven sections. Keep `title`, `question` and `system` single-quoted in the YAML header (for example, `title: 'The agent''s result: a rerun'`). Leave the year and choice fields unquoted.
 2. Cite the original source. arXiv links carry a version (`v2`); links into a repository are pinned to a commit, so the evidence cannot move under the reader.
 3. Keep development, final and transfer results apart. Do not infer per-task outcomes from ranks or averages, and do not call a transcription of published numbers a replication.
 4. Say what you did yourself. Reading a diff is not rerunning an experiment.
@@ -16,6 +16,8 @@ A receipt earns its place by changing a decision: after reading it, a maintainer
    python3 receipts.py ledger        # rebuild the tables in README.md
    python3 -m unittest discover
    ```
+
+The generator updates the English tables only. When changing a receipt or a source, update [简体中文](README.zh-CN.md) and [繁體中文](README.zh-TW.md) as well.
 
 ## Add a source
 

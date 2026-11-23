@@ -1,7 +1,7 @@
 ---
-title: The AI Scientist: what an outside evaluation found
-question: What did independent evaluators find when they ran the system themselves?
-system: The AI Scientist, v1 and v2
+title: 'The AI Scientist: what an outside evaluation found'
+question: 'What did independent evaluators find when they ran the system themselves?'
+system: 'The AI Scientist, v1 and v2'
 year: 2025
 changed: answer
 verified: rerun

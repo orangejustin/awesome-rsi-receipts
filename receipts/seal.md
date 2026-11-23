@@ -1,7 +1,7 @@
 ---
-title: SEAL: a model that writes its own training data
-question: What happens to earlier knowledge as self-generated updates accumulate?
-system: Self-Adapting Language Models (SEAL)
+title: 'SEAL: a model that writes its own training data'
+question: 'What happens to earlier knowledge as self-generated updates accumulate?'
+system: 'Self-Adapting Language Models (SEAL)'
 year: 2025
 changed: weights
 verified: reported

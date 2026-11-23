@@ -1,7 +1,7 @@
 ---
-title: Did failure feedback fix the failure?
-question: When an edit was prompted by one failing task, did it repair that task?
-system: Reanalysis of Darwin Gödel Machine logs
+title: 'Did failure feedback fix the failure?'
+question: 'When an edit was prompted by one failing task, did it repair that task?'
+system: 'Reanalysis of Darwin Gödel Machine logs'
 year: 2026
 changed: harness
 verified: recalculated

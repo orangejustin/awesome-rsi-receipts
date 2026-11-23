@@ -1,7 +1,7 @@
 ---
-title: Flex-RSI: letting the improver edit itself
-question: Did the improver get better, or did the harness just get more attempts at being edited?
-system: Flex-RSI benchmark
+title: 'Flex-RSI: letting the improver edit itself'
+question: 'Did the improver get better, or did the harness just get more attempts at being edited?'
+system: 'Flex-RSI benchmark'
 year: 2026
 changed: improver
 verified: reported

@@ -1,7 +1,7 @@
 ---
-title: FlashRSI: one harness, three outcomes
-question: Would this tuned harness still help on a task family it was not tuned on?
-system: FlashRSI (GEPA search over a Claude Code harness)
+title: 'FlashRSI: one harness, three outcomes'
+question: 'Would this tuned harness still help on a task family it was not tuned on?'
+system: 'FlashRSI (GEPA search over a Claude Code harness)'
 year: 2026
 changed: harness
 verified: reported

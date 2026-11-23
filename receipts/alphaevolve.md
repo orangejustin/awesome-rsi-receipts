@@ -1,7 +1,7 @@
 ---
-title: AlphaEvolve: results you can check yourself
-question: Which of the reported results can be confirmed without trusting the authors?
-system: AlphaEvolve
+title: 'AlphaEvolve: results you can check yourself'
+question: 'Which of the reported results can be confirmed without trusting the authors?'
+system: 'AlphaEvolve'
 year: 2025
 changed: program
 verified: checkable

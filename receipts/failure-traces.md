@@ -1,7 +1,7 @@
 ---
-title: Notes learned from failures, against the same search without them
-question: How much of the gain comes from seeing the failures, and how much from simply trying and keeping what scores better?
-system: Agent Self-Improvement with Frozen Weights
+title: 'Notes learned from failures, against the same search without them'
+question: 'How much of the gain comes from seeing the failures, and how much from simply trying and keeping what scores better?'
+system: 'Agent Self-Improvement with Frozen Weights'
 year: 2026
 changed: harness
 verified: reported

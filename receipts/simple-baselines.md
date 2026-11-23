@@ -1,7 +1,7 @@
 ---
-title: Code evolution against simple baselines
-question: Is the search method doing the work, or the way the problem was set up?
-system: Simple Baselines are Competitive with Code Evolution
+title: 'Code evolution against simple baselines'
+question: 'Is the search method doing the work, or the way the problem was set up?'
+system: 'Simple Baselines are Competitive with Code Evolution'
 year: 2026
 changed: program
 verified: reported

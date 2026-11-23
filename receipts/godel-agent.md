@@ -1,7 +1,7 @@
 ---
-title: Gödel Agent: rewriting the routine that rewrites
-question: How often does an agent that can edit its own improvement loop end up worse than it started?
-system: Gödel Agent
+title: 'Gödel Agent: rewriting the routine that rewrites'
+question: 'How often does an agent that can edit its own improvement loop end up worse than it started?'
+system: 'Gödel Agent'
 year: 2024
 changed: improver
 verified: reported

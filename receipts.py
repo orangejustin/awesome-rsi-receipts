@@ -5,8 +5,8 @@
     python3 receipts.py ledger --check  # fail if README.md is out of date
     python3 receipts.py links           # needs network and git: do the cited sources still exist?
 
-Standard library only. A receipt is a Markdown file in receipts/ that opens with a block of
-`key: value` lines between two `---` lines; see receipts/TEMPLATE.md.
+Standard library only. A receipt opens with a restricted YAML front matter block:
+one field per line, free-text values single-quoted; see receipts/TEMPLATE.md.
 """
 
 import argparse
@@ -38,7 +38,8 @@ VERIFIED = {
     "checkable": "Anyone can check the artifact",
 }
 TRANSFER = {"held": "Held", "mixed": "Mixed", "failed": "Did not hold", "untested": "Not tested"}
-FIELDS = ("title", "question", "system", "year", "changed", "verified", "transfer")
+TEXT_FIELDS = ("title", "question", "system")
+FIELDS = (*TEXT_FIELDS, "year", "changed", "verified", "transfer")
 SECTIONS = ("Claim", "Change", "Controls", "Result", "Verified", "Open", "Try it")
 
 URL = re.compile(r"https?://[^\s)>\"\]]+")
@@ -55,13 +56,25 @@ def parse(path):
         raise ValueError("must open with a `---` block of fields")
     head, body = text[4:].split("\n---\n", 1)
     fields = {}
-    for line in head.splitlines():
-        if not line.strip():
+    for line in head.split("\n"):
+        if not line.strip(" "):
             continue
-        key, sep, value = line.partition(":")
-        if not sep or not value.strip():
-            raise ValueError(f"cannot read field line {line!r}")
-        fields[key.strip()] = value.strip()
+        key, sep, value = line.partition(": ")
+        if not sep or not value.strip(" ") or not re.fullmatch(r"[a-z]+", key):
+            raise ValueError(f"cannot read field line {line!r}; expected `key: value`")
+        if key in fields:
+            raise ValueError(f"duplicate field {key}")
+        if re.search(r"[\x00-\x1f\x7f-\x9f\u2028\u2029\ufffe\uffff]", value):
+            raise ValueError(f"{key} must be on one line without control characters")
+        value = value.strip(" ")
+        if key in TEXT_FIELDS:
+            # Decode precisely the single-quoted YAML subset used in the template.
+            if not re.fullmatch(r"'(?:[^']|'')+'", value):
+                raise ValueError(f"{key} must be single-quoted; double any apostrophe inside")
+            value = value[1:-1].replace("''", "'")
+            if not value.strip():
+                raise ValueError(f"{key} must not be empty")
+        fields[key] = value
     return fields, body
 
 

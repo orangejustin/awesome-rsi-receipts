@@ -1,7 +1,7 @@
 ---
-title: Huxley-Gödel Machine: a high score is a poor guide to good descendants
-question: Is the agent you would pick by benchmark score the one that leads to better agents?
-system: Huxley-Gödel Machine
+title: 'Huxley-Gödel Machine: a high score is a poor guide to good descendants'
+question: 'Is the agent you would pick by benchmark score the one that leads to better agents?'
+system: 'Huxley-Gödel Machine'
 year: 2025
 changed: harness
 verified: reported

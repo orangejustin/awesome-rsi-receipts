@@ -1,7 +1,7 @@
 ---
-title: Darwin Gödel Machine: 20% to 50% on a subset
-question: How much of the gain survives on the full benchmark, another model or another benchmark?
-system: Darwin Gödel Machine
+title: 'Darwin Gödel Machine: 20% to 50% on a subset'
+question: 'How much of the gain survives on the full benchmark, another model or another benchmark?'
+system: 'Darwin Gödel Machine'
 year: 2025
 changed: harness
 verified: reported

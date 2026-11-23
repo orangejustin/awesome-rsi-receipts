@@ -1,7 +1,7 @@
 ---
-title: Short name of the result
-question: The question a reader should be able to answer differently after reading?
-system: Name of the system or study
+title: 'Short name of the result'
+question: 'The question a reader should be able to answer differently after reading?'
+system: 'Name of the system or study'
 year: 2026
 changed: harness
 verified: reported

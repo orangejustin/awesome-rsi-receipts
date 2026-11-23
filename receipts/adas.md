@@ -1,7 +1,7 @@
 ---
-title: ADAS: gains that shrank when others reran it
-question: Does the discovered agent still win with a different executor model and the same budget?
-system: Automated Design of Agentic Systems (Meta Agent Search)
+title: 'ADAS: gains that shrank when others reran it'
+question: 'Does the discovered agent still win with a different executor model and the same budget?'
+system: 'Automated Design of Agentic Systems (Meta Agent Search)'
 year: 2024
 changed: harness
 verified: rerun

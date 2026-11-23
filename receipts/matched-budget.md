@@ -1,7 +1,7 @@
 ---
-title: Harness evolution against extra attempts
-question: Would the unchanged harness do as well if it got the same budget and feedback?
-system: Rethinking the Evaluation of Harness Evolution for Agents
+title: 'Harness evolution against extra attempts'
+question: 'Would the unchanged harness do as well if it got the same budget and feedback?'
+system: 'Rethinking the Evaluation of Harness Evolution for Agents'
 year: 2026
 changed: harness
 verified: reported
